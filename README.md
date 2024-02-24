@@ -1,7 +1,7 @@
 # Streaming Platform
 
 This is a streaming platform project that allows users to find and explore movies. It is built using Next.js and Tailwind CSS.
-Website is Live at "https://movie-streaming-platform-cd0m70st9-fariha-ranas-projects.vercel.app"
+Website is Live at "https://movie-streaming-platform-fariha-ranas-projects.vercel.app"
 ## Installation
 
 1. Clone the repository. 
