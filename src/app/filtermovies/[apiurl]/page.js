@@ -11,8 +11,7 @@ function DisplayFilteredMovies() {
 
   useEffect(() => {
     let decodedUrl = decodeURIComponent(apiurl);
-
-    decodedUrl = decodedUrl.replace('/filtermovies', '');
+    decodedUrl = decodedUrl.replace('/filtermovies/', '');
 
     if (decodedUrl) {
       getFilteredMovies(decodedUrl)
@@ -23,7 +22,7 @@ function DisplayFilteredMovies() {
         alert(" Error ❌" + " " + error.message);
       });
     }
-  }, [apiurl]);
+  }, []);
 
   if (filteredMovies === null) {
     return <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
@@ -35,7 +34,8 @@ function DisplayFilteredMovies() {
     <div>
       <h1 className="text-5xl font-thin text-center m-8"  style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>Your Filtered Movies</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredMovies.map((movie) => (
+        {filteredMovies.length == 0 && <p className="text-red-500 text-center">No item found</p>}
+        {filteredMovies?.map((movie) => (
           <div key={movie.id} className="bg-gray-100 p-4 m-4 rounded shadow flex flex-col justify-center items-center">
             {movie.poster_path && (
               <div className="flex justify-center items-center">
