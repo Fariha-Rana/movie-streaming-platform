@@ -6,7 +6,7 @@ const MovieCollectionSearch = () => {
   const [searchParams, setSearchParams] = useState({
     query: 'marvel',
     includeAdult: false,
-    language: 'en-US',
+    language: 'en',
   });
 
   const handleInputChange = (e) => {
@@ -61,8 +61,8 @@ const MovieCollectionSearch = () => {
         >
           <option value="">Select</option>
           <option value="en-US">English (US)</option>
-          <option value="es-ES">Spanish (Spain)</option>
-          <option value="fr-FR">French (France)</option>
+          <option value="es">Spanish (Spain)</option>
+          <option value="fr">French (France)</option>
         </select>
       </div>
       <div className="flex justify-center">
